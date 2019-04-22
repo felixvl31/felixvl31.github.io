@@ -1,0 +1,426 @@
+@font-face {
+  font-family: "League Spartan";
+  src: url("../Fonts/LeagueSpartan-Bold.otf") format("truetype");
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-button {
+  transition: all 0.5s ease-out;
+}
+.menu-button.close {
+  transform: rotate(180deg);
+}
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.99;
+  visibility: hidden;
+  background-color:#1d1e22;
+}
+.menu.show {
+  visibility: visible;
+}
+.menu-picture,
+.menu-options {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+.menu-options {
+  background: #3d414c;
+  transform: translate3d(90%, 90%, 0);
+  transition: all 0.3s ease-out;
+}
+.menu-options.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu-picture {
+  background: #3a3f4c;
+  transform: translate3d(-90%, -90%, 0);
+  transition: all 0.3s ease-out;
+}
+.menu-picture.show {
+  transform: translate3d(0, 0, 0);
+}
+.portrait {
+  width: 250px;
+  height: 250px;
+  background: url("../Images/me.png");
+  border-radius: 50%;
+  border: solid 3px #feda6a;
+}
+.portrait:hover {
+  animation: jigglePic 0.5s infinite linear;
+}
+  @keyframes jigglePic {
+  0% {transform: rotate(0deg) ;}
+  50% {transform: rotate(1deg) ;}
+  100% {transform: rotate(-1deg);}
+  }
+.menu-item {
+  transform: translate3d(-90%, -90%, 0);
+  transition: all 0.3s ease-out;
+  font-family: 'Titillium Web', sans-serif;
+}
+.menu-item.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu-item.current > a {
+  color: #feda6a;
+}
+.menu-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  padding: 1rem 0;
+  font-weight: 700;
+  color: #d4d4dc;
+  transition: all 0.3s ease-out;
+  border-radius:10%;
+}
+.menu-link:hover {
+  color: #feda6a;
+}
+
+body {
+  background:  #393f4d;
+  color: #d4d4dc;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.FirstName{
+  color:#d4d4dc;
+  font-family: "League Spartan";
+}
+
+.LastName{
+  color:#feda6a;
+  font-family: "League Spartan";
+}
+
+h4{
+  color:#d4d4dc;
+  padding: 10px 0 20px 0px;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid #cccccc;
+  font-weight: bold;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-wrapper,.page-footer,header,.brand-logo{
+  background-color:#1d1e22 !important;
+}
+
+/*
+  ========================================
+  Bio
+  ========================================
+*/
+.About-Pic{
+  border-radius:50%;
+  border:2px solid #feda6a;
+  margin:20px;
+  width: 25%;
+  height:25%;
+}
+.About-Pic:hover {
+  animation: jigglePic 0.5s infinite linear;
+}
+  @keyframes jigglePic {
+    0% {transform: rotate(0deg) ;}
+    50% {transform: rotate(1deg) ;}
+    100% {transform: rotate(-1deg);}
+  }
+.Bio{
+  color:#feda6a;
+  font-size: medium;
+  line-height: 2;
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px 40px 15px 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align:left;
+  background-color:#1d1e22;
+  border-top: 2px solid #feda6a;
+  margin-bottom:10px;
+  border-radius:10px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/*
+========================================
+Portfolio
+========================================
+*/
+.portfolio-header{
+  margin-bottom:0;
+}
+.PortfolioImage{
+  margin: 10px auto;
+  border-radius: 10%;
+} 
+
+.Github,.Try{
+  text-align: center;
+  margin: 0 auto !important;
+  text-transform: none;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+}
+.btn{
+  margin: 0 auto !important;
+  padding:0;
+  font-weight: 600;
+  overflow: hidden;
+  font-size: 16px;
+}
+.Github{
+  background-color:#1d1e22;
+  color:#d4d4dc;
+  width:34%;
+}
+.Try{
+  background-color:#d4d4dc;
+  color:#1d1e22;
+  width:64%;
+}
+.Try:hover,.Github:hover,.Try:focus,.Github:focus{
+  background-color:#3a3f4c;
+  color:#d4d4dc;
+  border:1px solid #d4d4dc;
+}
+
+/*
+  ========================================
+  Contact
+  ========================================
+*/
+
+.contact-mine{
+  font-size:20px;
+  border: 1px solid #feda6a;
+  width:80%; 
+  padding:10px 20px;
+  background-color:#1d1e22; 
+  display:block;
+  margin:0 auto; 
+  margin-bottom:5px;
+  border-radius:5px;
+}
+.contact-mine:hover{
+  font-size:22px;
+  border: 2px solid #feda6a;
+  padding:8px 22px;
+  font-weight: 700;
+}
+.contact-First{
+  color:#feda6a;
+  font-weight:600;
+}
+.contact-Second{
+  color:#d4d4dc;
+}
+
+fieldset{
+  border:1px solid #feda6a !important;
+  border-radius:20px;
+  margin:0 !important;
+}
+input[type=text],input[type=email]{
+  background-color:white !important;
+  border-radius:0;
+}
+::placeholder {
+  color:#d4d4dc;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #feda6a; 
+  -webkit-box-shadow: 0 1px 0 0 #feda6a;
+  box-shadow: 0 1px 0 0 #feda6a;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+  margin-bottom:5px !important;
+  letter-spacing: 1px;
+  padding-left:5px;
+  width:98%;
+  border-radius:5px;
+}
+.contact{
+  letter-spacing: 1px;
+  width:80%;
+  margin: 0 auto;
+}
+label{
+  color:#feda6a;
+  font-size:1rem;
+  cursor: pointer;
+  font-weight:800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-info input,
+.contact-info select,
+.contact-info textarea {
+  border: none;
+  background-color:white;
+  border-radius: 5px;
+  color: #1d1e22;
+  display: block;
+  margin: 5px 0 20px 0;
+  padding: 5px 8px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+}
+.contact-info textarea {
+  height: 120px;
+  width: 100%;
+  resize: none;
+}
+.input-default {
+  border: 2px solid #1d1e22 ;
+  background: #3a3f4c;
+  padding: 11px 30px;
+  font-size: 14px;
+  color: #d4d4dc;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin: 10px auto;
+  border-radius:10px;
+}
+.input-default:hover {
+  background:#1d1e22;
+  cursor:pointer;
+  font-size:16px;
+  font-weight: 900;
+}
+.WrongEmail{
+  border:2px solid #e62739 !important;
+}
+
+/*
+  ========================================
+  Responsive
+  ========================================
+*/
+@media only screen and (max-width: 1420px)
+{
+  .btn{
+     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1310px)
+{
+  .btn{
+     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1200px)
+{
+  .btn{
+     font-size: 10px;
+  }
+}
+@media only screen and (max-width: 980px)
+{
+  .About-Pic{
+    width: 40%;
+    height:40%;
+  }
+}
+@media only screen and (max-width: 768px)
+{
+  .menu-options,
+  .menu-picture {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  .menu-options.show,
+  .menu-picture.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-options {
+    height: 70vh;
+    transform: translate3d(-100%, 100%, 0);
+    font-size: 25px;
+  }
+  .menu-picture {
+    height: 30vh;
+    transform: translate3d(100%, -100%, 0);
+  }
+  .menu-picture .portrait {
+    background: url("../Images/me-small.png");
+    width: 150px;
+    height: 150px;
+  }
+  .About-Pic{
+    width: 75%;
+    height:75%;
+  }
+  .Bio{
+    text-align:center;
+  }
+}
+@media only screen and (max-width: 710px)
+{
+}
+
+@media only screen and (max-width: 600px)
+{
+  .FirstName{
+    font-size:90%;
+  }
+  .LastName{
+     font-size:80%;
+  }
+  .PortfolioImage{
+  width:60%;
+  } 
+  .btn{
+     font-size: 16px;
+  }
+  .Github{
+    width:30%;
+  }
+  .Try{
+    width:50%;
+  }
+  .contact-mine{
+    display:block;
+    margin: 5px auto;
+  }
+  .thumbnail:hover {
+    position:relative;
+    width:100%;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+}
